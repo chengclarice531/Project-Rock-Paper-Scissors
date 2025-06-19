@@ -22,3 +22,7 @@ function getHumanChoice() {
     return userInput
 }
 console.log("User chose: ", getHumanChoice())
+
+/* Declare the players score variables */
+var humanScore = 0
+var computerScore = 0
