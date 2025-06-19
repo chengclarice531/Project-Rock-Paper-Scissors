@@ -14,15 +14,36 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-console.log("Computer chose: ", getComputerChoice())
+/*console.log("Computer chose: ", getComputerChoice())*/
 
 /* Write a logic to get the human choice */
 function getHumanChoice() {
     let userInput = prompt("Choose rock, paper, or scissors: ").toLowerCase()
     return userInput
 }
-console.log("User chose: ", getHumanChoice())
+/*console.log("User chose: ", getHumanChoice())*/
 
 /* Declare the players score variables */
 var humanScore = 0
 var computerScore = 0
+
+/* Write a logic to play a single round */
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("Draw!!!")
+    }
+    else if (humanChoice === "paper" && computerChoice === "rock" || humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore += 1
+        console.log("You win!", humanChoice, " beats ", computerChoice)
+    }
+    else if (computerChoice === "paper" && humanChoice === "rock" || computerChoice === "rock" && humanChoice === "scissors" || computerChoice === "scissors" && humanChoice === "paper"){
+        computerScore += 1
+        console.log("You lose! ", computerChoice, " beats ", humanChoice)
+    }
+}
+
+const computerSelection = getComputerChoice()
+/*console.log(computerSelection)*/
+const humanSelection = getHumanChoice()
+
+playRound(humanSelection, computerSelection)
