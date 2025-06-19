@@ -1,5 +1,6 @@
 /* Check if the js file is correctly linked*/
 console.log("Hello World")
+
 /*Write a logic to get the computer choice */
 function getComputerChoice() {
     let num = Math.random();
@@ -13,5 +14,11 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-
 console.log("Computer chose: ", getComputerChoice())
+
+/* Write a logic to get the human choice */
+function getHumanChoice() {
+    let userInput = prompt("Choose rock, paper, or scissors: ").toLowerCase()
+    return userInput
+}
+console.log("User chose: ", getHumanChoice())
