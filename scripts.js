@@ -68,6 +68,16 @@ function winOrLose() {
     else if (humanScore < computerScore) {
         console.log("Computer wins the game!! HAHAHAHA!")
     }
+    else {
+        console.log("The game concluded with a tie")
+    }
 }
+/* Main game site */
+console.log("Welcome to the rock paper scissors game!!! You will be playing against the computer")
+console.log("Rules of the game: ")
+console.log("Rock crushes scissors.")
+console.log("Scissors cut paper.")
+console.log("Paper covers rock.")
+console.log("The more rounds you win, the closer you are to victory. Best of luck! ")
 playGame()
 winOrLose()
