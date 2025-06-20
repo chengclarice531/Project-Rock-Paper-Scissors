@@ -58,4 +58,16 @@ function playGame() {
         playRound(humanSelection, computerSelection)
     }
 }
+/* Additional!! Write a logic to tell whether the user score higher or the computer, higher score = win */
+function winOrLose() {
+    console.log("Your score is ", humanScore)
+    console.log("Computer's score is ", computerScore)
+    if (humanScore > computerScore) {
+        console.log("You win this game!")
+    }
+    else if (humanScore < computerScore) {
+        console.log("Computer wins the game!! HAHAHAHA!")
+    }
+}
 playGame()
+winOrLose()
