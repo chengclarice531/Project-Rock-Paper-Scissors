@@ -56,6 +56,9 @@ function playGame() {
         const computerSelection = getComputerChoice()
         const humanSelection = getHumanChoice()
         playRound(humanSelection, computerSelection)
+        if (humanScore === 3 || computerScore === 3) {
+            i = 6;
+        }
     }
 }
 /* Additional!! Write a logic to tell whether the user score higher or the computer, higher score = win */
@@ -79,5 +82,6 @@ console.log("Rock crushes scissors.")
 console.log("Scissors cut paper.")
 console.log("Paper covers rock.")
 console.log("The more rounds you win, the closer you are to victory. Best of luck! ")
+console.log("First to 3 wins takes the game. Good luck!");
 playGame()
 winOrLose()
