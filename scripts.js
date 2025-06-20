@@ -1,5 +1,6 @@
-/* Check if the js file is correctly linked*/
-console.log("Hello World")
+/* 
+Check if the js file is correctly linked
+console.log("Hello World")*/
 
 /*Write a logic to get the computer choice */
 function getComputerChoice() {
@@ -14,14 +15,16 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-/*console.log("Computer chose: ", getComputerChoice())*/
+/*
+console.log("Computer chose: ", getComputerChoice())*/
 
 /* Write a logic to get the human choice */
 function getHumanChoice() {
     let userInput = prompt("Choose rock, paper, or scissors: ").toLowerCase()
     return userInput
 }
-/*console.log("User chose: ", getHumanChoice())*/
+/*
+console.log("User chose: ", getHumanChoice())*/
 
 /* Declare the players score variables */
 var humanScore = 0
@@ -41,9 +44,18 @@ function playRound(humanChoice, computerChoice) {
         console.log("You lose! ", computerChoice, " beats ", humanChoice)
     }
 }
-
+/* 
 const computerSelection = getComputerChoice()
-/*console.log(computerSelection)*/
+console.log(computerSelection)
 const humanSelection = getHumanChoice()
+playRound(humanSelection, computerSelection) */
 
-playRound(humanSelection, computerSelection)
+/* Write the logic to play the entire game */
+function playGame() {
+    for (let i = 1 ; i<=5 ; i++) {
+        const computerSelection = getComputerChoice()
+        const humanSelection = getHumanChoice()
+        playRound(humanSelection, computerSelection)
+    }
+}
+playGame()
